@@ -7,6 +7,13 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import page from "./page";
 import home from "./home";
 import article from "./article";
+import siteSettings from "./siteSettings";
+import menuItemSub from "./menuItemSub";
+import menuItemItem from "./menuItemItem";
+import menuItem from "./menuItem";
+import menu from "./menu";
+import getty from './getty'
+
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -15,8 +22,14 @@ export default createSchema({
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
     /* Your types here! */
+    siteSettings,
     page,
     home,
-    article
+    article,
+    getty,
+    menuItemSub,
+    menuItemItem,
+    menuItem,
+    menu,
   ]),
 })

@@ -25,6 +25,9 @@ export default {
         {
           type: "image",
         },
+        {
+          type: 'getty'
+        }
       ],
     },
   ],

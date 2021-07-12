@@ -4,7 +4,7 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
+import Header from "./regions/header"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -24,18 +24,25 @@ const Layout = ({ children }) => {
       <div
         sx={{
           maxWidth: ["400px", "800px", "1000px"],
-          padding: "0px 10%",
-          margin: "0 auto",
+          padding: ["0px 5%", "0px 5%", "0px 10%"],
           boxSizing: "content-box",
+          margin: "0 auto 0px auto",
         }}
       >
-        <main>{children}</main>
-        <footer
+        <div
+          sx={{
+            boxSizing: "content-box",
+            borderBottom: "thin solid black",
+          }}
         >
-          © {new Date().getFullYear()}, Built by
+          <main>{children}</main>
+          <footer
+          >
+            © {new Date().getFullYear()}, Built by
           {` `}
-          <a href="https://newt.io">newt.io</a>
-        </footer>
+            <a href="https://newt.io">newt.io</a>
+          </footer>
+        </div>
       </div>
     </>
   )
